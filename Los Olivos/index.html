@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Los Olivos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.jpg" alt="Logo del Restaurante">
+        <h1>Bienvenido a Los Olivos</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#comentarios">Comentarios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="menu">
+        <h2>Menú del Día</h2>
+        <div class="carrusel">
+            <div class="carrusel-imagenes">
+                <img src="images/pastel.jpg" alt="Pastel">
+                <img src="images/postres_fruta.jpg" alt="Postres de Frutas">
+                <img src="images/ensalada.jpeg" alt="Ensalada">
+                <img src="images/pizza.jpeg" alt="Pizza">
+                <img src="images/cafe_americanp.jpg" alt="Cafe">
+                <img src="images/desayuno.jpg" alt="Desayunos">
+            </div>
+        </div>
+    </section>
+
+    <section id="reservas">
+        <h2>Reservas</h2>
+        <button id="reservarMesaBtn">Reservar una Mesa</button>
+        <button id="reservarEventoBtn">Reservar un Evento</button>
+
+        <div id="formReservaMesa" style="display: none;">
+            <form id="formReserva">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                
+                <label for="personas">Número de personas:</label>
+                <input type="number" id="personas" min="1" required>
+                
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+                
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+                
+                <button type="submit">Confirmar Reserva</button>
+            </form>
+            <button type="button" id="cancelarReservaBtn" style="display: none;">Cancelar Reserva</button>
+            <p id="mensajeReserva"></p>
+        </div>
+
+        <div id="formReservaEvento" style="display: none;">
+            <form id="formEvento">
+                <label for="eventoNombre">Nombre:</label>
+                <input type="text" id="eventoNombre" required>
+
+                <label for="eventoTelefono">Teléfono:</label>
+                <input type="tel" id="eventoTelefono" required>
+                
+                <label for="eventoFecha">Fecha del evento:</label>
+                <input type="date" id="eventoFecha" required>
+                
+                <label for="eventoHora">Hora:</label>
+                <input type="time" id="eventoHora" required>
+                
+                <label for="eventoLugar">Lugar:</label>
+                <input type="text" id="eventoLugar" value="Salón Kalamata" readonly>
+                
+                <label for="eventoAsistentes">Número de asistentes:</label>
+                <input type="number" id="eventoAsistentes" min="1" required>
+                
+                <label for="eventoComida">Tipo de comida:</label>
+                <input type="text" id="eventoComida" required>
+                
+                <label for="eventoNotas">Notas adicionales:</label>
+                <textarea id="eventoNotas"></textarea>
+                
+                <button type="submit">Confirmar Evento</button>
+                <button type="button" id="cancelarEventoBtn" style="display: none;">Cancelar Evento</button>
+            </form>
+            <p id="mensajeEvento"></p>
+        </div>
+    </section>
+
+    <section id="ubicacion">
+        <h2>Visítanos</h2>
+        <iframe 
+            src="https://maps.app.goo.gl/DTequjwxGZyt4PBD6"
+            width="100%" 
+            height="400px" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <section id="comentarios">
+        <h2>Comentarios</h2>
+        <form id="formComentario">
+            <label for="comentarioNombre">Nombre:</label>
+            <input type="text" id="comentarioNombre" required>
+            
+            <label for="comentarioTexto">Comentario:</label>
+            <textarea id="comentarioTexto" required></textarea>
+            
+            <button type="submit">Enviar Comentario</button>
+        </form>
+        <div id="listaComentarios"></div>
+    </section>
+
+    <section id="redes-sociales">
+        <h3>¡Síguenos en nuestras redes sociales!</h3>
+        <a href="#"><img src="images/logo_facebook.webp" alt="Facebook"></a>
+        <a href="#"><img src="images/logo_instagram.png" alt="Instagram"></a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Los Olivos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
