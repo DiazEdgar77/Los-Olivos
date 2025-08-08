@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Los Olivos</title>
+    <link rel="stylesheet" href="stylelogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo">
+               <div class="logo-icon">
+                     <img src="img/Logo.png" alt="Logo Los Olivos" width="100" height="80">
+                </div>
+                </div>
+                <div class="logo-text">
+                    <h1>⠀⠀⠀LOS OLIVOS</h1>
+                    <p>restaurant | eventos</p>
+                </div>
+
+            <h2>Iniciar Sesión</h2>
+            
+            <form id="loginForm" action="validar_login.php" method="POST">
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" name="contraseña" required>
+                </div>
+                
+                <button type="submit" class="login-btn">Iniciar Sesión</button>
+            </form>
+            
+            <div class="register-link">
+                <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+            </div>
+            
+            <div class="back-link">
+                <a href="index.html">← Volver al inicio</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scriptlogin.js"></script>
+</body>
+</html>
